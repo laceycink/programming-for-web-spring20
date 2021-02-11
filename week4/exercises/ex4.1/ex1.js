@@ -8,5 +8,5 @@ heading.style.cursor = 'pointer';
 heading.addEventListener('click', handleHeadingClick);
 myEmptyDiv.appendChild(heading);
 function handleHeadingClick () {
-    document.body.style.backgroundColor = 'magenta';
+    document.body.style.backgroundColor = 'darkgreen';
 }
