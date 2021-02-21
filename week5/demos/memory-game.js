@@ -45,11 +45,12 @@ function setup() {
     }
 }
 function draw () {
-    background(0);
+    background('#145066');
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('yellow');
-        textSize(66);
-        text('You win!!!!', 400, 425);
+        fill('#bf8f36');
+        noStroke();
+        textSize(50);
+        text('Yay, you win!!', 100, 475);
         noLoop();
     }
     for (let k = 0; k < cards.length; k++) {
@@ -62,9 +63,12 @@ function draw () {
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
     fill (255);
-    textSize(36);
-    text('attemps ' + gameState.attempts, 100, 500);
-    text('matches ' + gameState.numMatched, 100, 450);
+    textSize(30);
+    text('attemps: ' + gameState.attempts, 525, 500);
+    text('matches: ' + gameState.numMatched, 525, 450);
+    fill('#fffff');
+    textSize(55);
+    text('Music Memory Game', 115, 65);
 }
 
 function mousePressed() {
@@ -112,14 +116,18 @@ class Card {
     }
 show () {
     if(this.face === UP || this.isMatch) {
-        fill('#aaa');
-        rect(this.x, this.y, this.width, this.height, 10);
+        fill('#f0f0f0');
+        rect(this.x, this.y, this.width, this.height, 5);
         image(this.cardFaceImg, this.x + 10, this.y + 15);
 
     } else {
-        fill('rgb(57.7%, 9.9%, 9.9%)');
-        rect(this.x, this.y, this.width, this.height, 10);
-        image(cardBack, this.x +15, this.y + 25);
+        fill('#bf8f36');
+        stroke('#916513');
+        strokeWeight(1.5);
+        rect(this.x, this.y, this.width, this.height, 5);
+        image(cardBack, this.x +13, this.y + 25);
+        image(cardBack, this.x +60, this.y + 65, 20, 30);
+        image(cardBack, this.x, this.y + 5, 20, 30);
         }
     }
 
