@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+  </head>
+
+<body>
+    <div id="header">
+        <h1>{{message}}</h1>
+        <p v-if="conditional===true">These facts are true</p>
+        <p v-else>These facts are not true</p>
+    </div>
+
+    <div>  
+        <ul id="facts">
+        <li v-for="item in items" :key="item.message">
+            {{ item.message }}
+        </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="lib/script.js"></script>
+</body>
+</html>
+
