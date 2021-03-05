@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <h1>Styles</h1>
+    <div id="app" v-cloak>
+      <nav>
+        <ul>
+          <li v-bind:class="{active: currentRoute==='home'}"><a href="#">Home</a></li>
+          <li v-bind:class="{active: currentRoute==='products'}"><a href="#">Products</a></li>
+          <li v-bind:class="{active: currentRoute==='services'}"><a href="#">Services</a></li>
+          <li v-bind:class="{active: currentRoute==='clients'}"><a href="#">Clients</a></li>
+          <li v-bind:class="{active: currentRoute==='contact'}"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

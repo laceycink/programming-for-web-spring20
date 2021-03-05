@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Llamas vs Alpacas</h1>
+    
+    <di id="list">
+        <h2>Similarities:</h2>
+        <ul id="same">
+          <li v-bind:class="[activeClass, errorClass]">They belong to the same family</li>
+          <li v-bind:class="[activeClass, errorClass]">They come from high altitudes</li>
+        </ul>
+
+        <h2>Differences:</h2>
+        <ul id="different">
+            <li v-bind:style="styleFact">Llamas are taller and heavier than alpacas</li>
+            <li v-bind:style="styleFact">Llamas have long banana shaped ears, while Alpacas have shorter, pointier ones</li>
+        </ul>
+    </div>
+    
+    <p>Read more here:</p>
+    <div id="app" v-cloak>
+        <a v-bind:title="llamaTitle"
+        v-bind:href="llamaFacts">Llama Wiki</a>
+        <a v-bind:title="alpacaTitle"
+        v-bind:href="alpacaFacts">Alpaca Wiki</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
