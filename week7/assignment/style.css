@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+}
+  
+th {
+height: 70px;
+}
+
+thead {
+    background: violet;
+}
+
+td {
+    padding: 10px;
+}
+
+.odd {
+    background: skyblue;
+}
+
+
+.second {
+    color: purple;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: purple;
+    text-shadow: 2px 2px violet;
+    text-shadow: 4px 4px rgb(240, 209, 240);
+}
+
+tr:hover {
+    background-color: darkgray;
+}
+    

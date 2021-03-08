@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70's Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>70's Vinyl Collection</h1>
+    <div id="myCollectionApp">
+        <table>
+            <thead>
+                <th>Album Name</th>
+                <th>Band Name</th>
+                <th>Release Date</th>
+                <th>Label</th>
+            </thead>
+
+            <tbody>
+                <tr v-for= "(box, idx) in albums" 
+                v-bind:class="{odd: idx % 2 !== 0, second: box.released === '1975'}">
+                    <td>{{box.album}}</td>
+                    <td>{{box.band}}</td>
+                    <td>{{box.released}}</td>
+                    <td>{{box.label}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
