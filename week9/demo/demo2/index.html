@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <another-component></another-component>
+            <my-component v-for="i in 1000"></my-component>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+var anotherComponent = {
+    data: function (){
+        return {
+            msg: 'Hello component'
+        }
+    },
+    template: '<h1>{{msg}}</h1>'
+}
+
+        Vue.component('my-component', {
+            template: '<strong>A static element...</strong>'
+        });
+        var vm = new Vue ({
+            el:'#app',
+            components: {
+                'another-component': anotherComponent
+            }
+        });
+    </script>
+</body>
+</html>

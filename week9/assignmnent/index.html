@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70's Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>70's Vinyl Collection</h1>
+    <div id="myCollectionApp">
+        <div class="container">
+        <table>
+            <thead>
+                <th>Album Name</th>
+                <th>Band Name</th>
+                <th>Release Date</th>
+                <th>Label</th>
+                <th>Owned</th>
+                <!-- <th>Delete?</th> -->
+            </thead>
+
+            <tbody>
+                <!-- <my-component
+                    v-for="album in albums"
+                    v-bind:key="album.id"
+                    v-bind:post="album">
+                </my-component> -->
+                <tr 
+                is="my-component" 
+                v-for= "(box, idx) in albums" 
+                v-bind:key="(box, idx).id"
+                v-bind:class="{odd: idx % 2 !== 0, second: box.released === '1975'}">
+                
+                <div class="my-component">
+                    <td vbind:album="(box, idx).album"></td>
+                    <td vbind:band="(box, idx).band"></td>
+                    <td vbind:released="(box, idx).released"></td>
+                    <td vbind:label="(box, idx).label"></td>
+                    <td vbind:collected="(box, idx).collected"></td>
+                </div>
+                    <!-- <td>
+                         <div class ="deleteAlbum">
+                            <button type="button" v-on:click="deleteItem(console)">Delete</button>
+                        </div>
+                    </td> -->   
+                </tr>
+            </tbody>
+        </table>
+
+        <form v-on:submit.prevent="submitHandler" class="new-console-form">
+            <fieldset>
+                <legend>Add a console to the collection</legend>
+                <div>
+                    <label for="album">Album Name</label>
+                    <input id="album" type="text" v-model="newConsoleObj.album">
+                </div>
+                <div>
+                    <label for="band">Band Name</label>
+                    <input id="band" type="text" v-model="newConsoleObj.band">
+                </div>
+                <div>
+                    <label for="released">Release Date</label>
+                    <input id="released" type="text" v-model="newConsoleObj.released">
+                </div>
+                <div>
+                    <label for="label">Label</label>
+                    <input id="label" type="text" v-model="newConsoleObj.label">
+                </div>
+                <div>
+                    <label for="collected">Owned</label>
+                    <input id="collected" type="checkbox" v-model="newConsoleObj.collected">
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <!-- <script>
+        /* var myComponent = {
+            data: function () {
+            return {
+                msg: ''
+            }
+        },
+            template: '<h1>{{msg}}</h1>'
+        } 
+        Vue.component('my-component', {
+            template: ''
+        });
+        var vm = new Vue ({
+            el:'#myCollectionApp',
+            components: {
+                'my-component': myComponent
+            }
+        });
+    </script> -->
+</body>
+</html>

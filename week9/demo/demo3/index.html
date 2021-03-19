@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <a-pod></a-pod>
+            <a-pod date="2018-08-07"></a-pod>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        Vue.component('a-pod', {
+            template: '<div><img :src="imgSrc" :title="imgTitle"><p>{{date || "today"}}</p><div>',
+            props: ['date'],
+            data: function () {
+                return {
+                imgSrc: '',
+                imgTitle: '',
+                };
+            },
+            created: function (){
+                this.fetchApod();
+            },
+            methods: {
+                fetchApod: function () {
+                    var apiKey = 'xyz';
+                    var url = 'https://xyz' + apiKey;
+                    if (this.date) {
+                        url += '&date=' + this.date;
+                    }
+                    var self = this;
+                    axios.get(url)
+                    .then(function (res) {
+                        self.imgSrc = res.data.url;
+                        self.imgTitle = res.data.title;
+                    });
+                }
+            }
+        });
+        var vm = new Vue ({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>

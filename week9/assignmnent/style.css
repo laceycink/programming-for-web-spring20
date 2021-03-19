@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+}  
+th {
+    height: 70px;
+}
+thead {
+    background: violet;
+}
+td {
+    padding: 10px;
+}
+.odd {
+    background: skyblue;
+}
+.second {
+    color: purple;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: purple;
+    text-shadow: 2px 2px skyblue;
+}
+tr:hover {
+    background-color: darkgray;
+}
+.new-console-form {
+    margin-top: 20px;
+}
+.new-console-form legend {
+    font-size: 30px;
+    color: purple;
+    text-align: center;
+}
+.new-console-form fieldset {
+    background: violet;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.new-console-form div {
+    margin: 10px, 0;
+    width: 120px;
+}
+.new-console-form div label {
+    max-width: 120px;
+    font-style: italic;
+}
+.new-console-form input {
+    max-width: 110px;
+    display: block;  
+}
