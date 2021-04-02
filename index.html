@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Axios and Vue</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <div v-for="story in stories" :key="story.responseText">
+                <p>{{story.response}}</p>
+            </div>
+        </div>
+        <script src="node_modules/axios/dist/axios.js"></script>
+        <script src="node_modules/vue/dist/vue.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

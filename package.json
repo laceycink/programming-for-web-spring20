@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laceycink/programming-for-web-spring20.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lacey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/laceycink/programming-for-web-spring20/issues"
@@ -19,5 +17,9 @@
   "homepage": "https://github.com/laceycink/programming-for-web-spring20#readme",
   "devDependencies": {
     "eslint": "^7.18.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "vue": "^2.6.12"
   }
 }
