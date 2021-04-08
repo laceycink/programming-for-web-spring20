@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <title>Binary Jazz</title>
+  </head>
+
+  <body>
+    <h1>Binary Jazz Story</h1>
+    <div id="#myApp">
+      <div v-for="story in jazzObjects">
+        {{story.line-number}}
+      </div>
+      <div v-for="story in jazzObjects">
+        {{story.line-content}}
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
